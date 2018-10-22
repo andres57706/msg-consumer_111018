@@ -31,7 +31,7 @@ Data model
 [http://www.rabbitmq.com/getstarted.html](http://www.rabbitmq.com/getstarted.html)
 
 ## Tareas por realizar
-- Realizar aplicacion que consuma datos desde instancia de RabbitMq e ingrese dichos datos en base de datos MongoDB con el siguiente modelo
+- Realizar aplicacion que consuma datos desde instancia de RabbitMq e ingrese dichos datos en base de datos MongoDB con el siguiente modelo. Tener en cuenta que recibira un array y la idea es que cada elemento de ese array se guarde como un registro en base de datos
 
 ```
 {
@@ -50,4 +50,4 @@ Data model
     - *count*: number, cantidad de registros solicitados
     - *skip*: number, parametro indica indice de base 0 para desplazarse en array de registros
   - GET registro por id (string), ex: /api/stocks/abc123def34234
-  - GET registro con filtro de texto para campo title. ex: /api/stocks?title=Netflix
+  - GET registro con filtro de texto para campo title. La idea de esta url es traer por medio del filtro un array en el cual se pueda ver la progrsion del valor de la accion para dicha compania filtrada ex: /api/stocks?title=Netflix
